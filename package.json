@@ -1,0 +1,37 @@
+{
+  "name": "sheeva-bot",
+  "version": "1.0.0",
+  "private": true,
+  "repository": "git@github.com:azat-io/sheeva-bot.git",
+  "author": "Azat S. <to@azat.io>",
+  "license": "MIT",
+  "scripts": {
+    "start": "babel-node -r \"node_modules/dotenv/config\" \"./src/index\"",
+    "lint": "eslint . --ignore-path .gitignore"
+  },
+  "dependencies": {
+    "@babel/core": "7.6.2",
+    "@babel/node": "7.6.2",
+    "@babel/preset-env": "7.6.2",
+    "dotenv": "8.1.0",
+    "firebase": "7.1.0",
+    "forecast": "0.3.2",
+    "node-fetch": "2.6.0",
+    "node-telegram-bot-api": "0.30.0",
+    "node-vk-bot-api": "2.4.11",
+    "ramda": "0.26.1"
+  },
+  "devDependencies": {
+    "eslint": "6.4.0",
+    "eslint-config-airbnb-base": "14.0.0",
+    "eslint-plugin-fp": "2.3.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-ramda": "2.5.1",
+    "husky": "3.0.5"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint"
+    }
+  }
+}
